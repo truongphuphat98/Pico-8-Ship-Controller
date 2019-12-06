@@ -1,0 +1,31 @@
+t=0
+
+function _init()
+t=t+1
+
+	ship={sp=1,x=60,y=60,h=4,p=0}
+	bullets={}
+	enemies={}
+
+	for i=1,4 do
+
+ add(enemies, {
+  sp=16,
+  m_x=i*16,
+  m_y=60-i*8,
+  x=-32,
+  y=-32,
+  r=12
+ })
+
+ end
+end	
+	
+
+--mainmenu
+scene="menu"
+x=100
+y=75
+
+	
+	

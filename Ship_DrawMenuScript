@@ -1,0 +1,19 @@
+function draw_menu()
+cls()
+print("press x to start",30,63,250)
+end
+
+function draw_game()
+cls()
+spr(1,x,y)
+end
+
+-- update & inputs
+function update_menu()
+if btnp(x) then 
+	scene = "game"
+	sfx(0)
+end
+	end
+	
+	

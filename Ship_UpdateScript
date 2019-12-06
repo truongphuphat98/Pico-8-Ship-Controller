@@ -1,0 +1,46 @@
+function _update()
+		 t=t+1
+		 
+  _anim()
+			
+		_move()
+		
+	for e in all(enemies) do
+  e.x = e.r*sin(t/50) + e.m_x
+  e.y = e.r*cos(t/50) + e.m_y
+		end
+	
+		for b in all(bullets) do
+		b.x-=b.dy
+		end
+		
+		if scene =="menu" then
+		update_menu()
+end
+		end
+--------------------------
+function _draw()
+			cls()
+			rect(0,0,127,127,5)
+			spr(ship.sp,ship.x, ship.y)
+			
+			_bulletpos()
+					
+			for e in all(enemies) do
+  	spr(e.sp,e.x,e.y)
+ end
+
+ for i=1,4 do
+  if i<=ship.h then 
+  spr(33,80+6*i,3)
+  else
+  spr(34,80+6*i,3)
+  end
+ end
+			
+			
+		if scene =="menu" then
+		draw_menu()
+end
+	end
+			
